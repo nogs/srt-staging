@@ -1,0 +1,15 @@
+{
+  "name": "srt",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://sunriseracing.team/",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cheerio": "^1.0.0-rc.5",
+    "handlebars": "^4.7.6"
+  },
+  "scripts": {
+    "build": "",
+    "deploy": ""
+  }
+}

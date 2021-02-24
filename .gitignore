@@ -4,3 +4,9 @@ _site
 .jekyll-metadata
 vendor
 .bundle
+
+data/riders.json
+data/signups*
+data/teams.json
+
+node_modules
