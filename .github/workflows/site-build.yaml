@@ -17,7 +17,9 @@ jobs:
     - run: npm ci
     - run: npm run build
     - run: git diff
-    - run: git config user.email "actions@reposing.net"
-    - run: git config user.name "Reposiing GitHub Actions"
-    - run: git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-    - run: npm run deploy
+    - name: Deploy gh-pages branch
+      run: |
+        git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+        npm run deploy -- -u "Reposiing GitHub Actions <actions@reposing.net>"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
